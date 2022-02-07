@@ -1,0 +1,43 @@
+<div class="gpay">
+  <button class="btn btn-primary" (click)="showForm()">Google Pay</button>
+  <div>
+    <table *ngIf="isShowForm" class="gpayform-table">
+      <tr>
+        <td class="left-align">
+          <label>Name</label>
+        </td>
+        <td>
+          &nbsp;
+          <input type="text" name="userName" [(ngModel)]="receiverName" />
+        </td>
+      </tr>
+      <tr>
+        <td class="left-align">
+          <label>Amount</label>
+        </td>
+        <td>
+          &nbsp;
+          <input type="number" name="Amount" [(ngModel)]="amount" />
+        </td>
+      </tr>
+      <tr>
+        <td class="left-align">
+          <br />
+          <button class="btn btn-primary" (click)="sentAmount()">Send</button>
+        </td>
+      </tr>
+      <tr>
+        <td colspan="2" *ngIf="isAmountTransfer">
+          <br />
+          <div class="alert alert-success">
+            Sent {{ amount }} to {{ receiverName }} successfully
+          </div>
+        </td>
+      </tr>
+    </table>
+  </div>
+</div>
+<!--
+    <app-msgbox></app-msgbox>
+-->
+<app-transaction-hisory></app-transaction-hisory>

@@ -1,0 +1,118 @@
+<div class="quizz-outer">
+  <h5>Quizz</h5>
+  <p>Which is capital of india ?</p>
+  <form>
+    <div
+      class="answer-section"
+      [ngClass]="{
+        'correct-answer':
+          answer == correctAnswer && answer == 'Delhi' && isAnswerSubmitted,
+        'incorrect-answer':
+          answer != correctAnswer && answer == 'Delhi' && isAnswerSubmitted
+      }"
+    >
+      <input
+        type="radio"
+        id="delhi"
+        name="ans"
+        value="Delhi"
+        [(ngModel)]="answer"
+        [disabled]="isAnswerSubmitted"
+        [ngClass]="{
+          'correct-answer':
+            answer == correctAnswer && answer == 'Delhi' && isAnswerSubmitted,
+          'incorrect-answer':
+            answer != correctAnswer && answer == 'Delhi' && isAnswerSubmitted
+        }"
+      />
+      &nbsp;
+      <label for="delhi">Delhi</label>
+    </div>
+    <br />
+    <div
+      class="answer-section"
+      [ngClass]="{
+        'correct-answer':
+          answer == correctAnswer && answer == 'Mumbai' && isAnswerSubmitted,
+        'incorrect-answer':
+          answer != correctAnswer && answer == 'Mumbai' && isAnswerSubmitted
+      }"
+    >
+      <input
+        type="radio"
+        id="mumbai"
+        name="ans"
+        value="Mumbai"
+        [(ngModel)]="answer"
+        [disabled]="isAnswerSubmitted"
+        [ngClass]="{
+          'correct-answer':
+            answer == correctAnswer && answer == 'Mumbai' && isAnswerSubmitted,
+          'incorrect-answer':
+            answer != correctAnswer && answer == 'Mumbai' && isAnswerSubmitted
+        }"
+      />
+      &nbsp;
+      <label for="mumbai">Mumbai</label>
+    </div>
+    <br />
+    <div
+      class="answer-section"
+      [ngClass]="{
+        'correct-answer':
+          answer == correctAnswer && answer == 'Chennai' && isAnswerSubmitted,
+        'incorrect-answer':
+          answer != correctAnswer && answer == 'Chennai' && isAnswerSubmitted
+      }"
+    >
+      <input
+        type="radio"
+        id="chennai"
+        name="ans"
+        value="Chennai"
+        [(ngModel)]="answer"
+        [disabled]="isAnswerSubmitted"
+        [ngClass]="{
+          'correct-answer':
+            answer == correctAnswer && answer == 'Chennai' && isAnswerSubmitted,
+          'incorrect-answer':
+            answer != correctAnswer && answer == 'Chennai' && isAnswerSubmitted
+        }"
+      />
+      &nbsp;
+      <label for="chennai">Chennai</label>
+    </div>
+    <br />
+    <div
+      class="answer-section"
+      [ngClass]="{
+        'correct-answer':
+          answer == correctAnswer && answer == 'Kolkata' && isAnswerSubmitted,
+        'incorrect-answer':
+          answer != correctAnswer && answer == 'Kolkata' && isAnswerSubmitted
+      }"
+    >
+      <input
+        type="radio"
+        id="kolkata"
+        name="ans"
+        value="Kolkata"
+        [(ngModel)]="answer"
+        [disabled]="isAnswerSubmitted"
+        [ngClass]="{
+          'correct-answer':
+            answer == correctAnswer && answer == 'Kolkata' && isAnswerSubmitted,
+          'incorrect-answer':
+            answer != correctAnswer && answer == 'Kolkata' && isAnswerSubmitted
+        }"
+      />
+      &nbsp;
+      <label for="kolkata">Kolkata</label>
+    </div>
+    <br />
+
+    <button (click)="submitAnswer()">Submit</button>
+    &nbsp;
+    <button (click)="resetAnswer()">Reset</button>
+  </form>
+</div>

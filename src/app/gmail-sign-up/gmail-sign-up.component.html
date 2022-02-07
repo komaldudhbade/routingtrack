@@ -1,0 +1,139 @@
+<div class="middle-container" *ngIf="isShownRegisterForm">
+  <form name="userData">
+    <div class="left-container">
+      <img src="/assets/images/gmail_logo.jpg" alt="logo image" />
+      <h4>Create your Google Account</h4>
+      to continue to Gmail
+
+      <div class="form-row-custom">
+        <div class="firstname-outer input-horizontal">
+          <input
+            type="text"
+            class="input-element"
+            name="firstName"
+            id=""
+            placeholder="firstname"
+            [(ngModel)]="userData.firstName"
+          />
+        </div>
+        <div class="lastname-outer input-horizontal">
+          <input
+            type="text"
+            class="input-element"
+            name="lastName"
+            id=""
+            placeholder="lastname" 
+            [(ngModel)]="userData.lastName"
+          />
+        </div>
+      </div>
+      <div class="form-row-custom">
+        <input
+          type="text"
+          class="usename-input input-element"
+          name="userName"
+          placeholder="username"
+          [(ngModel)]="userData.userName"
+        /><button class="addon">@gmail.com</button>
+        <div class="text-muted subscript-text">
+          You can use letters, numbers & periods
+        </div>
+      </div>
+
+      <div class="form-row-custom">
+        <div class="firstname-outer input-horizontal">
+          <input
+            type="password"
+            class="input-element"
+            name="password"
+            id=""
+            placeholder="password"
+            [(ngModel)]="userData.password"
+          />
+        </div>
+        <div class="lastname-outer input-horizontal">
+          <input
+            type="password"
+            class="input-element"
+            name="confirm"
+            id=""
+            placeholder="confirm"
+            [(ngModel)]="userData.confirm"
+          />
+        </div>
+        <div class="text-muted subscript-text">
+          Use 8 or more characters with a mix of letters, numbers & symbols
+        </div>
+      </div>
+
+      <div class="form-row-custom">
+        <input type="checkbox" name="" id="" />&nbsp;
+        <label>Show password</label>
+      </div>
+
+      <br />
+      <br />
+
+      <div class="form-row-custom">
+        <a href="" class="sign-in-link">Sign in instead</a>
+        <button class="btn" (click)="nextAction()">Next</button>
+        <div class="clear"></div>
+      </div>
+    </div>
+  </form>
+
+  <div class="right-container">
+    <img src="/assets/images/gmail.svg" alt="logo image" />
+    <div class="right-middle-text">
+      One account. All of Google working for you.
+    </div>
+  </div>
+
+  <div class="clear"></div>
+</div>
+<div class="middle-container" *ngIf="!isShownRegisterForm">
+  <h3>Register User Data</h3>
+  <table class="table table-bordered">
+      <tr>
+          <td>
+              <label for="">firstName</label>
+          </td>
+          <td>
+              {{userData.firstName}}
+          </td>
+      </tr>
+      <tr>
+          <td>
+              <label for="">lastName</label>
+          </td>
+          <td>
+              {{userData.lastName}}
+          </td>
+      </tr>
+      <tr>
+          <td>
+              <label for="">userName</label>
+          </td>
+          <td>
+              {{userData.userName}}
+          </td>
+      </tr>
+      <tr>
+          <td>
+              <label for="">password</label>
+          </td>
+          <td>
+              {{userData.password}}
+          </td>
+      </tr>
+      <tr>
+          <td>
+              <label for="">confirm</label>
+          </td>
+          <td>
+              {{userData.confirm}}
+          </td>
+      </tr>
+  </table>
+  <button (click)="backAction()">back</button>
+</div>

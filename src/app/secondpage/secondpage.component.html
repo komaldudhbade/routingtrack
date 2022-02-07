@@ -1,0 +1,79 @@
+<div class="card">
+  <div class="card-body">
+    <h5 class="card-title">Fruit Data</h5>
+    <p class="card-text">
+      fruit name:{{ fruitName }}<br />
+      color : {{ fruitColor }}<br />
+      weight : {{ weight }}<br />
+      prize : {{ prize }}
+    </p>
+  </div>
+</div>
+*****************************************************************
+<br />
+<br />
+<button *ngIf="showFruitTable==false" (click)="display()">showTable</button>
+<button  *ngIf="showFruitTable==true" (click)="display()">hideTable</button>
+
+<table  *ngIf="showFruitTable==true" style="width: 50%" class="table table-bordered">
+  <tr>
+    <td class="col-md-6">
+      <label> 
+        fruit Name 
+      </label>
+    </td>
+    <td class="col-md-6">
+      {{ fruitName }}
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <label> color </label>
+    </td>
+    <td>
+      {{ fruitColor }}
+    </td>
+  </tr>
+
+  <tr>
+    <td>
+      <label> weight </label>
+    </td>
+    <td>
+      {{ weight }}
+    </td>
+  </tr> 
+  <tr>
+    <td>
+      <label> prize </label>
+    </td>
+    <td>
+      {{ prize }}
+    </td>
+  </tr> 
+  <tr>
+    <td>
+      <label> image </label>
+    </td>
+    <td>
+      <img [src] = "image" [height] = "height" [width] = "width">
+      <br />
+     <!-- height <input type="range" [(ngModel)]="height" name="" id="" max="300">
+     <br />
+     width <input type="range" [(ngModel)]="width" name="" id="" max="300"> -->
+      
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <label >availInState</label>
+    </td>
+    <td> 
+      <select >
+        <option *ngFor="let i of availInState">{{i}}</option>
+      </select>
+    </td>
+  </tr>
+
+
+</table>

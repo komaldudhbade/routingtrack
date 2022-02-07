@@ -1,0 +1,95 @@
+<div class="card">
+  <div class="card-body">
+    <h5 class="card-heading">Student Data</h5>
+    <p class="card-text">
+      studentName: {{ firstName }}<br />
+      studentid: {{ id }}<br />
+      studentcity:{{ city }}<br />
+    </p>
+  </div>
+</div>
+<br>
+<br>
+******************************************* 
+<br>
+<br>
+<button *ngIf="showStudentTable==false" (click)="display()" >showTable</button>
+<button *ngIf="showStudentTable==true" (click)="display()">hideTable</button>
+<table *ngIf="showStudentTable==true" style = "width : 50%" class = "table table-bordered">
+<tr>
+  <td class = "col-md-6"> 
+<label>
+  student Name
+</label>
+
+  </td>
+  <td class = "col-md-6">
+{{firstName}}
+  </td>
+</tr>
+<tr>
+  <td>
+<label>
+  student id
+</label>
+
+  </td>
+  <td>
+{{id}}
+  </td>
+  </tr>
+  
+  <tr>
+    <td>
+  <label>
+    student city
+  </label>
+  
+    </td>
+    <td>
+  {{city}}
+    </td>
+  </tr>
+  <tr>
+    <td><label for="">student image</label></td>
+    <td><img [src]="imagePath" alt=""></td>
+  </tr>
+  <tr>
+    <td>
+      <label for="">student state</label>
+    </td>
+    <td>
+      <select>
+        <option > Andhrapradesh </option>
+        <option > Bihar </option>
+        <option > Maharashtra</option>
+        <option > Maharashtra</option>
+        <option > Madhyapradesh</option>
+        <option > Gujrat</option>
+        <option > Karnataka </option>
+        <option > Tamilnadu </option>
+        <option > Aasam </option>
+        <option > Kerala </option>
+        <option > JK </option>
+        <option > Maharashtra 1</option>
+        <option > Maharashtra 2</option>
+        <option > Maharashtra 3</option>
+        <option > Maharashtra 4</option>
+        <option > Maharashtra 5</option>
+        <option > Maharashtra 6</option>
+        <option > Maharashtra 7</option>
+
+      </select>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <label >state using ngFor</label>
+    </td>
+    <td>
+      <select >
+        <option *ngFor= " let i of stateArray">{{i}} </option>
+      </select>
+    </td>
+  </tr>
+</table>

@@ -1,0 +1,14 @@
+.cblabel{
+    width: 75px;
+}
+.msgmain{
+    width: 311px;
+    margin: 100px auto;
+    border: 2px dotted #aaa;
+    padding: 20px;
+    border-radius: 10px;
+
+}
+.altcustom{
+color: green;
+}

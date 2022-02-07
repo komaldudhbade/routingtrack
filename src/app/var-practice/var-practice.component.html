@@ -1,0 +1,21 @@
+<h4>var practice component</h4>
+<hr>
+name : {{name}}<br/>
+age : {{age}}<br />
+Card Number : {{getCardNumber()}}
+
+<h5>Account Info</h5>
+Account Holder : {{account.accountHolder}} <br />
+Account Type : {{account.accountType}} <br />
+Account Segment : {{account.accountSegment}}
+
+<h5>Printing Array</h5>
+{{table2}} <br />
+
+<ul>
+    <li *ngFor="let i of table2">{{i}}</li>
+</ul>
+ <ol>
+    <li *ngFor="let item of objArray">{{item.name}}</li>
+ </ol>
+

@@ -1,0 +1,16 @@
+<div class="trans-history">
+    <h4>Transaction History</h4>
+    <div class="hostory-list">
+        <div class="trasction" *ngFor="let tranction of tranactionList">
+            <img *ngIf="tranction.accontImage" [src]="tranction.accontImage" alt="" class="trans-img">
+            <div *ngIf="!tranction.accontImage" class="trans-img trans-img_div">
+                {{tranction.accountName.substring(0,1).toUpperCase()}}
+            </div>
+            <div class="account-holder">
+                <div class="acc-name"><h5>{{tranction.accountName}}</h5></div>
+                <div class="tran-time text-muted">{{tranction.transTime}}</div>
+            </div>
+            <div class="amount"><b>-₹ {{tranction.amount}}</b></div>            
+        </div>
+    </div>
+</div>

@@ -1,0 +1,19 @@
+<p>calculator works!</p>
+
+
+
+<table>
+    <tr>
+        <td><input type="number" [(ngModel)]="firstInput" /></td>
+        <td><input type="number" [(ngModel)]="secondInput" /></td>
+        <td>= {{ result }}</td>
+    </tr>
+    <tr>
+        <td><button (click)="addition()" >+</button></td>
+        <td><button (click)="substraction()" >-</button></td>
+    </tr>
+    <tr>
+        <td><button (click)="multiplication()" >*</button></td>
+        <td><button (click)="division()" >/</button></td>
+    </tr>
+</table>

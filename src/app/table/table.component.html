@@ -1,0 +1,23 @@
+<p>table works!</p>
+<h5>Table</h5>
+<div>
+  <input type="number" [(ngModel)]="firstInput" />
+  <button (click)="calculateTable()">Print Table</button>
+  <div class="table-wraper">
+    <table class="table table-striped table-bordered">
+        <tbody>
+            <tr *ngFor="let index of table">
+                <td>
+                  {{ index }}
+                </td>
+            </tr>
+        </tbody>
+
+    </table>
+  </div>
+
+</div>
+
+<!-- \\<app-color-picker></app-color-picker> -->
+
+

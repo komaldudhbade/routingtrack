@@ -1,0 +1,65 @@
+<div class="card">
+  <div class="card-body">
+    <h5 class="card-title">Vehical Info</h5>
+    <p class="card-text">
+      carName : {{ carName }}<br />
+      maker : {{ maker }}<br />
+      type : {{ type }}<br />
+      weight : {{ weight }}<br />
+      enginePower : {{ enginePower }}<br />
+      maxSpeed : {{ maxSpeed }}
+    </p>
+  </div>
+</div>
+
+********************
+<br>
+<button *ngIf="showVehicalInfo==false" (click)="display()">showInfo</button>
+<button *ngIf="showVehicalInfo==true" (click)="display()" >hideInfo</button>
+<table  *ngIf="showVehicalInfo==true"class="table table-bordered" style="width: 30%;">
+  <tbody>
+    <tr>
+      <td colspan="2"><h5>Vehical Info</h5></td>
+    </tr>
+    <tr>
+      <td><label for="">Car Name</label></td>
+      <td>{{carName}}</td>
+    </tr>
+    <tr>
+      <td><label for="">maker
+      
+      </label></td>
+      <td>{{maker}}</td>
+    </tr>
+    <tr>
+      <td><label for="">type</label></td>
+      <td>{{type}}</td>
+    </tr>
+    <tr>
+      <td><label for="">weight</label></td>
+      <td>{{weight}}</td>
+    </tr>
+    <tr>
+      <td><label for="">enginePower</label></td>
+      <td>{{enginePower}}</td>
+    </tr>
+    <tr>
+      <td><label for="">maxSpeed</label></td>
+      <td>{{maxSpeed}}</td>
+    </tr>
+    <tr>
+      <td><label for="">image</label></td>
+      <td><img [src]="imagePath" alt="car image" height="150" width="150"></td>
+    </tr>
+    <tr>
+      <td>
+        <label >varianst</label>
+      </td>
+      <td>
+        <select >
+          <option *ngFor='let variant of variants'>{{variant}}</option>
+        </select>
+      </td>
+    </tr>
+  </tbody>
+</table>

@@ -1,0 +1,110 @@
+<div class="card">
+  <div class="card-body">
+    <h5 class="card-title">Customer Info</h5>
+    <p class="card-text">
+      firstName : {{ firstName }}<br />
+      lastName : {{ lastName }}<br />
+      customerId : {{ customerId }}<br />
+      accountNumber : {{ accountNumber }}<br />
+      address : {{ address }}<br />
+      emailId : {{ emailId }}<br />
+      phoneNumber : {{ phoneNumber }}
+    </p>
+  </div>
+</div>
+
+**************************************************
+<br />
+<br />
+<button *ngIf="showCustomerDetails==false" (click)="display()">showdetails</button>
+<button *ngIf="showCustomerDetails==true" (click)="display()">hidedetails</button>
+<table *ngIf="showCustomerDetails==true" style="width: 50%" class="table table-bordered">
+  <tr>
+    <td>
+      <label> firstName </label>
+    </td>
+    <td>
+      {{ firstName }}
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <label> lastName </label>
+    </td>
+    <td>
+      {{ lastName }}
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <label> customerId </label>
+    </td>
+    <td>
+      {{ customerId }}
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <label> accountNumber </label>
+    </td>
+    <td>
+      {{ accountNumber }}
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <label> address </label>
+    </td>
+    <td>
+      {{ address }}
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <label> emailId </label>
+    </td>
+    <td>
+      {{ emailId }}
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <label> phoneNumber </label>
+    </td>
+    <td>
+      {{ phoneNumber }}
+    </td>
+  </tr>
+
+  <tr>
+    <td>
+      <label> image </label>
+    </td>
+    <td>
+      <img [src] ="imagePath" alt="">
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <label >customerLocation</label>
+    </td>
+    <td>
+      <select >
+        <option *ngFor='let location of customerLocation'>{{location}}</option>
+      </select>
+    </td>
+  </tr>
+</table>
+
+<table class="table table-striped table-boredred">
+  <thead>
+    <tr>
+      <th>
+        firstName
+      </th>
+      <th>
+        
+      </th>
+    </tr>
+  </thead>
+</table>

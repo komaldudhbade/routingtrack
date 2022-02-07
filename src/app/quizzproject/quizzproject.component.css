@@ -1,0 +1,14 @@
+.incorrect-answer{
+border: 1px solid red;
+outline: 1px solid red;
+}
+.correct-answer{
+border: 1px solid green;
+outline: 1px solid green;
+}
+.answer-section{
+    width: 200px;
+}
+.quizz-outer{
+    padding: 20px;
+}

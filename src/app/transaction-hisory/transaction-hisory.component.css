@@ -1,0 +1,30 @@
+.trans-history{
+    width: 400px;
+    margin: 20px auto;
+    border: 1px solid #ccc;
+    padding: 10px;
+}
+.trasction{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+}
+.trans-img {
+    height: 60px;
+    width: 60px;
+    border-radius: 30px;
+}
+.trans-img_div {
+    border: 1px solid #ccc;
+    background-color: maroon;
+    color: #fff;
+    font-size: 35px;
+    text-align: center;
+    margin-right: 10px;
+}
+.account-holder{
+    width: 198px;
+}
+.amount {
+    width: 80px;
+}

@@ -1,0 +1,12 @@
+<p>structral-directive-demo works!</p>
+<div>
+  <div *ngFor="let colorChar1 of colorCodeCharRange">
+    <div *ngFor="let colorChar2 of colorCodeCharRange">
+      <div
+        class="color-box"
+        *ngFor="let colorChar3 of colorCodeCharRange"
+        [style.backgroundColor]="'#'+colorChar3+colorChar2+colorChar1"
+      ></div>
+    </div>
+  </div>
+</div>

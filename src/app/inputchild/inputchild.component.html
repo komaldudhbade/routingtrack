@@ -1,0 +1,45 @@
+<p>inputchild works!</p>
+<div class="gpay">
+  <button class="btn btn-primary" (click)="showForm()">Google Pay</button>
+  <div>
+    <table *ngIf="isShowForm" class="gpayform-table">
+      <tr>
+        <td class="left-align">
+          <label>Name</label>
+        </td>
+        <td>
+          <input type="text" name="userName" [(ngModel)]="receiverName" />
+        </td>
+      </tr>
+      <tr>
+        <td class="left-align">
+          <label>Amount</label>
+        </td>
+        <td>
+          <input type="number" name="Amount" [(ngModel)]="amount" />
+        </td>
+      </tr>
+      <tr>
+        <td class="left-align">
+          <label>City</label>
+        </td>
+        <td>
+          <input type="text" name="City" [(ngModel)]="receiverCity" />
+        </td>
+      </tr>
+      <tr>
+        <td class="left-align">
+          <button class="btn btn-primary" (click)="sentAmount()">Send</button>
+        </td>
+      </tr>
+      <tr>
+        <td colspan="2" *ngIf="isAmountTransfer">
+          <div class="alert alert-success">
+            Sent {{ amount }} to {{ receiverName }} at
+            {{ receiverCity }} successfully
+          </div>
+        </td>
+      </tr>
+    </table>
+  </div>
+</div>

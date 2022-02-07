@@ -1,0 +1,34 @@
+
+<div class="Data_Holder row">
+  <div class="col-md-6 col-xs-6 col-lg-6">
+    <img [src]="mobileImage" alt="" />
+  </div>
+  <div class="col-md-6 col-xs-6 col-lg-6">
+    <h5>{{ mobileName }}</h5>
+    {{mobileCompany}}<br>
+   Mobile Original Price  {{mobileOriginalPrice}}<br>
+   Discount <input type="number" [(ngModel)]="discount"><br>
+   <br>
+   <button (click)="calculatePriceAfterDiscount()">calculate Price After Discount</button><br>
+   Price After Discount {{priceAfterDiscount}}
+
+  </div>
+
+</div>
+
+<div class="Data_Holder row" *ngFor="let item of shopingCard">
+  <div class="col-md-6 col-xs-6 col-lg-6">
+    <img [src]="item.itemImage" alt="" />
+  </div>
+  <div class="col-md-6 col-xs-6 col-lg-6">
+    <h5>{{ item.itemName }}</h5>
+    {{item.itemCompany}}<br>
+   Original Price  {{item.itemOriginalPrice}}<br>
+   Discount <input type="number" [(ngModel)]="item.itemDiscount"><br>
+   <br>
+   <button (click)="calculatePriceAfterDiscount2(item)">calculate Price After Discount</button><br>
+   Price After Discount {{item.itemPriceAfterDiscount}}
+
+  </div>
+
+</div>

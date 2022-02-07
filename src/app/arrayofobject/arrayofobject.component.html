@@ -1,0 +1,68 @@
+<p>arrayofobject works!</p>
+<div>
+  <table>
+    <tr>
+      <td>
+        <img
+          [src]="fruitObject.fruitImage"
+        />
+      </td>
+      <td>
+        <table>
+          <tr>
+            <td>
+              <label for="">Fruit Name</label>
+            </td>
+            <td>
+              <input type="text" [(ngModel)]="fruitObject.fruitName" />
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label for="">Fruit Price</label>
+            </td>
+            <td>
+              <input type="text" [(ngModel)]="fruitObject.fruitPrice" />
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label for="">Fruit Color</label>
+            </td>
+            <td>
+              <input type="text" [(ngModel)]="fruitObject.fruitColor" />
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label for="">Fruit Discount</label>
+            </td>
+            <td>
+              <input type="text" [(ngModel)]="fruitObject.fruitDiscount" />
+            </td>
+          </tr>
+          <tr>
+            <td></td>
+            <td>
+              <button (click)="calculatePriceAfterDiscount(fruitObject)">
+                calculate Price After Discount
+              </button>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label for="">Fruit Price After Discount</label>
+            </td>
+            <td>
+              <input
+                type="text"
+                [(ngModel)]="fruitObject.fruitPriceAfterDiscount"
+              />
+            </td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+  </table>
+</div>
+ 

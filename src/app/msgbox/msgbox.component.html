@@ -1,0 +1,21 @@
+<div class="msgmain">
+  <h5>Chat Box</h5>
+  <div>
+    <label class="cblabel"> To </label>
+    <input type="text" [(ngModel)]="userName" />
+  </div>
+  <div>
+    <label class="cblabel"> Message </label>
+    <textarea
+      name=""
+      id=""
+      cols="22"
+      rows="2"
+      [(ngModel)]="userMessage"
+    ></textarea>
+  </div>
+  <button (click)="sentMsg()">Send</button>
+  <div class="altcustom" *ngIf="isMsgSent">
+    Message sent to {{ userName }} successfully
+  </div>
+</div>

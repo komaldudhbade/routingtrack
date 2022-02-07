@@ -1,0 +1,79 @@
+<div class="card">
+  <div class="card-body">
+    <h5 class="card-title">Mobile Info</h5>
+    <p class="card-text">
+      mobileName : {{ mobileName }}<br />
+      color : {{ color }}<br />
+      companyName : {{ companyName }}<br />
+      prize : {{ prize }}<br />
+      type : {{ type }}<br />
+      version : {{ version }}
+    </p>
+  </div>
+</div>
+<br />
+
+<br />
+<br />
+<button *ngIf="showTable == false"(click)=" display()">show table</button>
+<button *ngIf="showTable == true" (click)="display()">hide table</button>
+<br>
+<table *ngIf="showTable == true" class="table table-bordered table-striped" style="width: 40%">
+  <tbody>
+    <tr>
+      <td><label for="">mobileName</label></td>
+      <td>{{ mobileName }}</td>
+    </tr>
+    <tr class="table-info">
+      <td><label for="">color</label></td>
+      <td>{{ color }}</td>
+    </tr>
+    <tr class="table-warning">
+      <td><label for="">companyName</label></td>
+      <td>{{ companyName }}</td>
+    </tr>
+    <tr class="table-danger">
+      <td><label for="">prize</label></td>
+      <td>{{ prize }}</td>
+    </tr>
+    <tr class="table-success">
+      <td><label for=""> type</label></td>
+      <td>{{ type }}</td>
+    </tr>
+    <tr class="table-dark">
+      <td><label for=""> version</label></td>
+      <td>{{ version }}</td>
+    </tr>
+    <tr class="table-primary">
+      <td><label for=""> imagePath</label></td>
+      <td><img [src]="imagePath" alt="" /></td>
+    </tr>
+    <tr>
+      <td>
+        <label>madeIn</label>
+      </td>
+      <td>
+        <select>
+          <option *ngFor="let i of madeIn">{{ i }}</option>
+        </select>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+-----------------------------
+<table class="table table-striped">
+  <tr>
+    <th>name</th>
+    <th>location</th>
+  </tr>
+  <tr *ngFor="let user of usersList">
+    <td>
+      {{ user.name }}
+    </td>
+    <td>
+      {{ user.location }}
+    </td>
+  </tr>
+</table>
+

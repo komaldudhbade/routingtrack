@@ -1,0 +1,77 @@
+.middle-container {
+    width: 50%;
+    margin: 100px auto;
+    border: 1px solid #eee;
+    padding: 10px;
+    box-shadow: 1px 1px 2px #ddd;
+  }
+  .firstname-outer {
+    width: 49%;
+  }
+  .lastname-outer {
+    width: 48%;
+  }
+  .input-horizontal {
+    display: inline-block;
+  }
+  .input-horizontal input {
+  }
+  .form-row-custom .input-horizontal:last-child {
+    text-align: right;
+  }
+  
+  .input-element {
+    border: 1px solid #eee;
+    border-radius: 3px;
+  }
+  .usename-input {
+    border-right: none;
+  }
+  .addon {
+    border: 1px solid #eee;
+    border-left: none;
+    background: none;
+    color: #777;
+    height: 29px;
+    border-radius: 3px;
+  }
+  .sign-in-link {
+    color: blue;
+    float: left;
+  }
+  .btn {
+    background: blue;
+    color: white;
+    border: 1px solid lightblue;
+    border-radius: 3px;
+    padding: 7px 15px;
+    float: right;
+  }
+  .form-row-custom {
+    margin: 10px 0px 5px;
+  }
+  input[type="text"],
+  input[type="password"] {
+    height: 29px;
+  }
+  .usename-input {
+    width: 70.5%;
+  }
+  .clear {
+    clear: both;
+  }
+  .subscript-text {
+    font-size: 12px;
+  }
+  .left-container{
+    width: 60%;
+    float:left;
+  }
+  .right-container{
+    width: 40%;
+    float: left;
+  }
+  .right-middle-text {
+    text-align: center;
+  }
+  
